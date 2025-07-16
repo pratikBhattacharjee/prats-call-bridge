@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+# Prat's Call Bridge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A card game score tracker built with React and TypeScript. Track bids, scores, and game progression for the custom "Prat's Call Bridge" card game.
+
+## Game Rules
+
+- **Minimum bid**: 2 (no bidding 0 or 1)
+- **Winning condition**: Players win ONLY if they get exactly their bid OR their bid + 1 trick
+- **Scoring**:
+  - **Win**: Get points equal to your bid
+  - **Lose**: Get negative points equal to your bid
+- **Total tricks per round**: Must equal 13
+
+## Features
+
+- 4-player game tracking
+- Round-by-round bid and score entry
+- Automatic score calculation
+- Game history and scoreboard
+- Continue from specific round (useful for ongoing games)
+- Local storage persistence
+- Responsive design for mobile and desktop
 
 ## Available Scripts
 

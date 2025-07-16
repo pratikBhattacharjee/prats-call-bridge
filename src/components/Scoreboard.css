@@ -1,0 +1,214 @@
+.scoreboard {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scoreboard h3 {
+  color: #2c5530;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.current-scores {
+  margin-bottom: 30px;
+}
+
+.current-scores h4 {
+  color: #4a6b4e;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.scores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.player-score {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #e9ecef;
+  transition: transform 0.2s ease;
+}
+
+.player-score:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-name {
+  font-weight: 600;
+  color: #2c5530;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.total-score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a3a1e;
+}
+
+.rounds-history {
+  margin-bottom: 30px;
+}
+
+.rounds-history h4 {
+  color: #4a6b4e;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.history-table {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 80px repeat(4, 1fr);
+  background: #2c5530;
+  color: white;
+  font-weight: 600;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 80px repeat(4, 1fr);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-row:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.round-col,
+.player-col {
+  padding: 15px 10px;
+  text-align: center;
+  border-right: 1px solid #e0e0e0;
+}
+
+.round-col {
+  font-weight: 600;
+  color: #2c5530;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bid-tricks {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.bid,
+.tricks {
+  font-size: 0.85rem;
+}
+
+.round-points {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.round-points.positive {
+  color: #155724;
+  background: #d4edda;
+}
+
+.round-points.negative {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.game-info {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #e9ecef;
+}
+
+.game-info p {
+  margin: 8px 0;
+  color: #495057;
+  font-size: 1.1rem;
+}
+
+.game-info strong {
+  color: #2c5530;
+}
+
+@media (max-width: 768px) {
+  .scores-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 60px repeat(4, 1fr);
+    font-size: 0.9rem;
+  }
+
+  .round-col,
+  .player-col {
+    padding: 10px 5px;
+  }
+
+  .player-name {
+    font-size: 1rem;
+  }
+
+  .total-score {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scoreboard {
+    padding: 20px;
+  }
+
+  .scores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 50px repeat(4, 1fr);
+    font-size: 0.8rem;
+  }
+
+  .bid-tricks {
+    font-size: 0.75rem;
+  }
+
+  .round-points {
+    font-size: 0.9rem;
+  }
+}
