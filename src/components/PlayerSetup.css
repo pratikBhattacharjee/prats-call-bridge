@@ -116,20 +116,24 @@
 
 .scores-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 15px;
+  max-width: 100%;
 }
 
 .score-input-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0; /* Allow shrinking below content size */
 }
 
 .score-input-group label {
   font-weight: 600;
   color: #2c5530;
   font-size: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .score-input-group input {
@@ -139,6 +143,9 @@
   font-size: 1rem;
   appearance: textfield;
   -moz-appearance: textfield;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .score-input-group input::-webkit-outer-spin-button,
@@ -230,5 +237,30 @@
 
   .advanced-options {
     padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .setup-container {
+    padding: 15px;
+    margin: 5px;
+  }
+
+  .scores-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .score-input-group label {
+    font-size: 0.9rem;
+  }
+
+  .score-input-group input {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .advanced-options {
+    padding: 10px;
   }
 }
